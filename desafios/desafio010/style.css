@@ -1,157 +1,138 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: "idroid";
+    font-family: android;
     src: url(fontes/idroid.otf);
 }
 
-body {
-    background-color: #84E1AD;
+:root {
+    --cor1: #C1F0D5;
+    --cor2: #3BD781;
+    --cor3: #185534;
+    --cor4: #DB5461;
+}
+
+* {
     margin: 0px;
+    padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    background-image: linear-gradient(to bottom, #3CD882, #1A5C38);
-    margin: 0px;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 header>h1 {
-    margin: 0px;
-    padding-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px black;
+    margin: 20px;
 }
 
-header>h1,
 header>p {
-    text-align: center;
-    color: white;
+    margin: 20px;
     text-shadow: 1px 1px 2px black;
 }
 
-main>h1,
-main>h2 {
-    font-family: idroid;
-    color: #131200;
-    text-shadow: 1px 1px 2px #FF4A1C;
-    font-size: 1.6em;
-}
-
-main>h2 {
-    background-color: hsla(146, 61%, 70%, 0.5);
-    padding: 5px;
-    font-size: 1.2em;
-}
-
-.menu>nav {
-    display: inline;
-    margin: auto 10px;
-}
-
-.menu>nav>a {
-    color: white;
+nav>a {
+    margin: 10px;
     text-decoration: none;
+    color: var(--cor2);
+    text-shadow: 1px 1px 2px black;
+    font-weight: bold;
 }
 
-.menu>nav>a:hover {
-    background-color: #3CD882;
+nav>a:hover {
+    background-color: black;
     color: white;
+    padding: 5px;
     border-radius: 5px;
-    padding: 5px
+    transition: 200ms;
 }
 
-main>p {
+body {
+    background-color: var(--cor2);
+}
+
+.fundo {
+    background-color: white;
+    max-width: 800px;
+    min-width: 300px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     text-align: justify;
+    line-height: 1.3em;
+    border-radius: 0px 0px 10px 10px;
 }
 
-p {
-    text-indent: 20px;
+main h1,
+h2,
+h3 {
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    font-family: android;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.centralizar {
+main h1 {
+    margin-bottom: 20px;
+}
+
+main p {
+    margin: 20px 0px;
+}
+
+.adaptar-imagem img {
+    width: 100%;
+}
+
+.bugdroid img {
     display: block;
     margin: auto;
 }
 
-.video-youtube {
-    background-color: #1A5C38;
-    margin: 0px;
-}
-
 .video {
-    width: 760px;
-    height: 327px;
-    padding: 20px;
+    background-color: var(--cor3);
+    padding: 30px;
 }
 
-footer>h1 {
-    margin: 0px;
+.video iframe {
+    width: 100%;
 }
 
-#fundo-branco {
-    background-color: white;
-    width: 800px;
-    margin: auto;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.verde-claro-de-fundo {
-    background-color: hsla(146, 61%, 70%, 0.5);
-    margin: 0px;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
-}
-
-.verde-escuro-de-fundo {
-    background-color: #3CD882;
-    margin: 0px;
-    padding: 10px;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.verde-escuro-de-fundo>h1 {
-    margin: 0px;
+aside h1 {
+    margin: 20px 0px 10px 0px;
     color: white;
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5em;
 }
 
-.rodape {
-    padding-top: 10px;
+aside section {
+    background-color: var(--cor1);
     border-radius: 10px;
 }
 
-.vai-pra-left {
-    display: inline-block;
-    text-align: left;
-    text-align: justify;
-}
-
-.vai-pra-right {
-    display: inline-block;
-    text-align: right;
-    text-align: justify;
-    margin: 0px 0px 0px 200px;
-}
-
-.centralizar-e-background-verde-escuro {
-    text-align: center;
-    background-color: #1A5C38;
-    color: white;
-    margin-bottom: 0px;
-}
-
-.centralizar-e-background-verde-escuro>p {
-    margin-bottom: 0px;
-    padding: 5px;
+aside p, ul {
+    padding: 0px 10px 10px 10px;
+    line-height: 1.3em;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0px;
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714\00A0\00A0';
 }
 
-ul>li::before {
-    content: "\2713";
-    font-weight: bold;
+footer {
+    text-align: center;
+    background-color: var(--cor3);
+    color: white;
+    padding: 5px;
+    margin-top: 1%;
 }
