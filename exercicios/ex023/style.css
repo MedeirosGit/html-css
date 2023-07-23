@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+table {
+    width: 500px;
+}
+
+table td {
+    border: 1px solid black;
+    text-align: center;
+}
